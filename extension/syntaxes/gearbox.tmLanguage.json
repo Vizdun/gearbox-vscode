@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Gearbox",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#pararells"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "storage.type.gearbox",
+					"match": "(g|c|e)"
+				},
+				{
+					"name": "variable.gearbox",
+					"match": "(l)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.gearbox",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gearbox",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.gearbox",
+					"match": "[0-9]"
+				}
+			]
+		},
+		"pararells": {
+			"patterns": [
+				{
+					"name": "punctuation.definition.block",
+					"match": "(\\[|\\])"
+				}
+			]
+		}
+	},
+	"scopeName": "source.gearbox"
+}
