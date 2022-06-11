@@ -13,6 +13,9 @@
 		},
 		{
 			"include": "#pararells"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -23,7 +26,7 @@
 					"match": "(g|c|e)"
 				},
 				{
-					"name": "variable.gearbox",
+					"name": "storage.modifier",
 					"match": "(l)"
 				}
 			]
@@ -52,6 +55,14 @@
 				{
 					"name": "punctuation.definition.block",
 					"match": "(\\[|\\])"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": ";.*\n"
 				}
 			]
 		}
